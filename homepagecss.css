@@ -1,0 +1,2693 @@
+
+/*--------------------------------------------------------------# Top Bar--------------------------------------------------------------*/
+#topbar {
+    background: #2c2d2e;
+    height: 40px;
+    font-size: 14px;
+    transition: all 0.5s;
+    color: #fff;
+}
+
+#topbar.topbar-scrolled {
+    top: -40px;
+}
+
+#topbar .contact-info a {
+    line-height: 1;
+    color: #fff;
+    transition: 0.3s;
+}
+
+#topbar .contact-info a:hover {
+    text-decoration: underline;
+}
+
+#topbar .contact-info i {
+    padding-right: 4px;
+    margin-left: 15px;
+}
+
+#topbar .contact-info i:first-child {
+    margin-left: 0;
+}
+
+#topbar .social-links a {
+    color: rgba(255, 255, 255, 0.6);
+    padding-left: 15px;
+    display: inline-block;
+    line-height: 1px;
+    transition: 0.3s;
+}
+
+#topbar .social-links a:hover {
+    color: #fff;
+}
+
+/*--------------------------------------------------------------# Header--------------------------------------------------------------*/
+#header {
+    background: #fff;
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 20px 0;
+    top: 31px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#header.header-scrolled {
+    top: 0;
+    padding: 15px;
+}
+
+#header .logo {
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    font-family: "Poppins", sans-serif;
+}
+
+#header .logo a {
+    color: #222222;
+}
+
+#header .logo a span {
+    color: #F53838;
+}
+
+#header .logo img {
+    max-height: 50px;
+}
+
+@media (max-width: 992px) {
+    #header {
+        padding: 15px;
+        top: 0;
+    }
+
+    #header .logo {
+        font-size: 28px;
+    }
+}
+
+/*--------------------------------------------------------------# Navigation Menu--------------------------------------------------------------*/
+/* Desktop Navigation */
+.nav-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu>ul {
+    display: flex;
+}
+
+.nav-menu>ul>li {
+    position: relative;
+    white-space: nowrap;
+    padding: 10px 0 10px 28px;
+}
+
+.nav-menu a {
+    display: block;
+    position: relative;
+    color: #222222;
+    transition: 0.3s;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0 3px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+}
+
+.nav-menu>ul>li>a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #F53838;
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-menu a:hover:before,
+.nav-menu li:hover>a:before,
+.nav-menu .active>a:before {
+    visibility: visible;
+    width: 100%;
+}
+
+.nav-menu a:hover,
+.nav-menu .active>a,
+.nav-menu li:hover>a {
+    color: #F53838;
+}
+
+.nav-menu .drop-down ul {
+    display: block;
+    position: absolute;
+    left: 26px;
+    top: calc(100% + 30px);
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    padding: 10px 0;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: 0.3s;
+}
+
+.nav-menu .drop-down:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+}
+
+.nav-menu .drop-down li {
+    min-width: 180px;
+    position: relative;
+}
+
+.nav-menu .drop-down ul a {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: none;
+    color: #062b5b;
+    font-weight: bold;
+}
+
+.nav-menu .drop-down ul a:hover,
+.nav-menu .drop-down ul .active>a,
+.nav-menu .drop-down ul li:hover>a {
+    color: #F53838;
+}
+
+.nav-menu .drop-down>a:after {
+    content: "\25bc";
+    font-family: IcoFont;
+    padding-left: 5px;
+}
+
+.nav-menu .drop-down .drop-down ul {
+    top: 0;
+    left: calc(100% - 30px);
+}
+
+.nav-menu .drop-down .drop-down:hover>ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+}
+
+.nav-menu .drop-down .drop-down>a {
+    padding-right: 35px;
+}
+
+.nav-menu .drop-down .drop-down>a:after {
+    content: "\25bc";
+    font-family: IcoFont;
+    position: absolute;
+    right: 15px;
+}
+
+@media (max-width: 1366px) {
+    .nav-menu .drop-down .drop-down ul {
+        left: -90%;
+    }
+
+    .nav-menu .drop-down .drop-down:hover>ul {
+        left: -100%;
+    }
+
+    .nav-menu .drop-down .drop-down>a:after {
+        content: "\25bc";
+    }
+}
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+    position: fixed;
+    right: 15px;
+    top: 16px;
+    z-index: 9998;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    transition: all 0.4s;
+    outline: none !important;
+    line-height: 1;
+    cursor: pointer;
+    text-align: right;
+}
+
+.mobile-nav-toggle i {
+    color: #222222;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 55px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    z-index: 9999;
+    overflow-y: auto;
+    background: #fff;
+    transition: ease-in-out 0.2s;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+.mobile-nav * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mobile-nav a {
+    display: block;
+    position: relative;
+    color: #222222;
+    padding: 10px 20px;
+    font-weight: 500;
+    outline: none;
+}
+
+.mobile-nav a:hover,
+.mobile-nav .active>a,
+.mobile-nav li:hover>a {
+    color: #106eea;
+    text-decoration: none;
+}
+
+.mobile-nav .drop-down>a:after {
+    content: "\25bc";
+    font-family: IcoFont;
+    padding-left: 10px;
+    position: absolute;
+    right: 15px;
+}
+
+.mobile-nav .active.drop-down>a:after {
+    content: "\25b2";
+}
+
+.mobile-nav .drop-down>a {
+    padding-right: 35px;
+}
+
+.mobile-nav .drop-down ul {
+    display: none;
+    overflow: hidden;
+}
+
+.mobile-nav .drop-down li {
+    padding-left: 20px;
+}
+
+.mobile-nav-overly {
+    width: 100%;
+    height: 100%;
+    z-index: 9997;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(9, 9, 9, 0.6);
+    overflow: hidden;
+    display: none;
+    transition: ease-in-out 0.2s;
+}
+
+.mobile-nav-active {
+    overflow: hidden;
+}
+
+.mobile-nav-active .mobile-nav {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-nav-active .mobile-nav-toggle i {
+    color: #fff;
+}
+
+
+
+
+#topbar {
+    height: 30px;
+}
+
+
+.agency-pricing_btn a:before {
+    position: absolute;
+    content: "";
+    width: 0px;
+    height: 0px;
+    right: 0;
+    top: 45px;
+    right: 15px;
+    box-shadow: 0 0 30px 31px rgb(213 8 217 / 90%);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s all ease-in-out;
+}
+
+.agency-pricing_btn a:after {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    content: "";
+    top: -100%;
+    right: 0;
+    z-index: -2;
+    transition: 0.3s all ease-in-out;
+    background-color: #6c2b95;
+}
+
+
+
+
+
+
+.app-eight-home {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.4;
+    font-family: "Circular Std Book";
+    -moz-osx-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
+.app-eight-home::selection {
+    color: #ffffff;
+    background-color: #6e3ebf;
+}
+
+.app-eight-home::-moz-selection {
+    color: #ffffff;
+    background-color: #6e3ebf;
+}
+
+.app-eight-home .container {
+    max-width: 1200px;
+}
+
+.ul-li ul {
+    margin: 0;
+    padding: 0;
+}
+
+.ul-li ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.ul-li-block ul {
+    margin: 0;
+    padding: 0;
+}
+
+.ul-li-block ul li {
+    list-style: none;
+    display: block;
+}
+
+div#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.ei-preloader {
+    background-color: #fff;
+    background: #f1f2f3 url("../img/app-landing/pre.svg") no-repeat center center;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+[data-background] {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    overflow: hidden;
+}
+
+button {
+    cursor: pointer;
+}
+
+.form-control:focus,
+button:visited,
+button.active,
+button:hover,
+button:focus,
+input:visited,
+input.active,
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus,
+a:hover,
+a:focus,
+a:visited,
+a.active,
+select,
+select:hover,
+select:focus,
+select:visited {
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+.form-control {
+    box-shadow: none;
+}
+
+.relative-position {
+    position: relative;
+}
+
+.pera-content p {
+    margin-bottom: 0;
+}
+
+.appeight-headline h1,
+.appeight-headline h2,
+.appeight-headline h3,
+.appeight-headline h4,
+.appeight-headline h5,
+.appeight-headline h6 {
+    margin: 0;
+    font-family: "Poppins";
+}
+
+.ei-scrollup {
+    width: 55px;
+    right: 20px;
+    z-index: 5;
+    height: 55px;
+    bottom: 20px;
+    display: none;
+    position: fixed;
+    border-radius: 100%;
+    line-height: 55px;
+    background-image: linear-gradient(-45deg, #e511e6 32%, #6b2c94 100%);
+}
+
+.ei-scrollup i {
+    color: #fff;
+    font-size: 20px;
+}
+
+.eight-section-title {
+    margin: 0 auto;
+}
+
+.eight-section-title .eg-title-tag {
+    color: #000000;
+    font-size: 17px;
+    font-weight: 500;
+    position: relative;
+    font-family: "Circular Std";
+}
+
+.eight-section-title .eg-title-tag i:nth-child(1) {
+    height: 5px;
+    width: 5px;
+    background-color: #4ce7f3;
+}
+
+.eight-section-title h2 {
+    font-size: 36px;
+    font-weight: 700;
+    padding: 15px 0px 12px;
+    line-height: 1.306;
+}
+
+.eight-section-title h2 span {
+    font-weight: 400;
+}
+
+.eight-section-title .square-shape {
+    width: 40px;
+    height: 35px;
+    left: -52px;
+    top: 0;
+    position: absolute;
+}
+
+.eight-section-title .square-shape i {
+    height: 9px;
+    width: 9px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.eight-section-title .square-shape i:nth-child(1) {
+    top: -8px;
+    width: 5px;
+    height: 5px;
+    left: 20px;
+    background-color: #4ce7f3;
+}
+
+.eight-section-title .square-shape i:nth-child(2) {
+    width: 10px;
+    left: 28px;
+    height: 10px;
+    background-color: #4ce7f3;
+}
+
+.eight-section-title .square-shape i:nth-child(3) {
+    height: 17px;
+    width: 17px;
+    background-color: #7c0dbe;
+}
+
+.eight-section-title .square-shape i:nth-child(4) {
+    top: 10px;
+    left: 10px;
+    width: 12px;
+    height: 12px;
+    background-color: #ff00d6;
+}
+
+.eight-section-title p {
+    font-size: 17px;
+    line-height: 1.647;
+}
+
+@keyframes scale {
+    from {
+        transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(1.08);
+        -webkit-transform: scale(1.08);
+    }
+}
+
+@keyframes left-right-move {
+    0% {
+        transform: translateX(-100px);
+    }
+
+    50% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(-100px);
+    }
+}
+
+/*---------------------------------------------------- */
+/*global area*/
+/*----------------------------------------------------*/
+.feature-eight-section .eight-feature-box .feature-icon8 i,
+.ei-service-icon-text .ei-service-icon i,
+.eg-how-work-section .ei-how-work-content-item .eg-how-work-icon-text .eg-how-work-icon i {
+    display: block;
+    background-image: linear-gradient(173deg, #ff0000 30%, #50c7f5 67%, #72aaff 99%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ei-service-icon-text:hover .ei-service-icon i,
+.eg-how-work-section .ei-how-work-content-item .eg-how-work-icon-text:hover .eg-how-work-icon i {
+    display: block;
+    background: -webkit-gradient(left top, right top, color-stop(0%, #fff), color-stop(100%, #fff));
+    background: -ms-linear-gradient(left, #fff 0%, #fff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ei-service-icon-text .ei-service-icon:after,
+.eg-how-work-section .ei-how-work-content-item .eg-how-work-icon-text .eg-how-work-icon:after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: -1;
+    transition: 0.3s all ease-in-out;
+    transform: scale(0.5);
+    border-radius: 100%;
+    background-image: -ms-linear-gradient(173deg, #4cd0ff 0%, #617af4 53%, #ff03d0 99%);
+}
+
+@keyframes {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeFromUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeFromUp {
+    animation-name: fadeFromUp;
+}
+
+. {
+    animation-name: ;
+}
+
+. {
+    animation-name: ;
+}
+
+/*---------------------------------------------------- */
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/* cotech */
+/*----------------------------------------------------*/
+.cotech-agency {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.4;
+    font-family: "Roboto";
+    -moz-osx-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
+.cotech-agency::selection {
+    color: #ffffff;
+    background-color: #6e3ebf;
+}
+
+.cotech-agency::-moz-selection {
+    color: #ffffff;
+    background-color: #6e3ebf;
+}
+
+.cotech-agency-preloader {
+    background-color: #fff;
+    background: #fff url("../img/cotech-c/pre.svg") no-repeat center center;
+}
+
+.cotech-headline h1,
+.cotech-headline h2,
+.cotech-headline h3,
+.cotech-headline h4,
+.cotech-headline h5,
+.cotech-headline h6 {
+    margin: 0;
+    font-family: "Poppins";
+}
+
+.cotech-agency-scrollup {
+    width: 55px;
+    right: 20px;
+    z-index: 5;
+    height: 55px;
+    bottom: 20px;
+    display: none;
+    position: fixed;
+    border-radius: 100%;
+    line-height: 55px;
+    background-image: linear-gradient(-45deg, #e511e6 32%, #6b2c94 100%);
+}
+
+.cotech-agency-scrollup i {
+    color: #fff;
+    font-size: 20px;
+}
+
+.cotech_two_section_title {
+    margin: 0 auto;
+    max-width: 465px;
+}
+
+.cotech_two_section_title .title_tag {
+    padding: 5px 30px;
+}
+
+.cotech_two_section_title h2 {
+    font-size: 40px;
+    padding-top: 15px;
+}
+
+.cotech_btn a {
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 30px;
+    display: inline-block;
+    border: 2px solid #6c2b95;
+}
+
+.cotech_btn:before {
+    top: 8px;
+    left: 32px;
+    font-weight: 900;
+    font-size: 22px;
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+}
+
+/*---------------------------------------------------- */
+/*global area*/
+/*----------------------------------------------------*/
+@keyframes {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeFromUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeFromUp {
+    animation-name: fadeFromUp;
+}
+
+. {
+    animation-name: ;
+}
+
+. {
+    animation-name: ;
+}
+
+.cotech_two_section_title .title_tag,
+.cotech_two_banner_section .agency-banner_content .agency-tilte_tag,
+.cotech_two_feature_section .agency-feature_text .feature_tag,
+.addonbox_section .addonbox_text .feature_tag {
+    color: #d02727;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 3px 30px;
+    border-radius: 8px;
+    display: inline-block;
+    background-color: #f4e0e1;
+}
+
+.cotech_two_section_title h2,
+.cotech_two_banner_section .agency-banner_content h1,
+.cotech_two_about_section .agency-about_text_icon .agency-about_text h3,
+.cotech_two_feature_section .agency-feature_text h2,
+.addonbox_section .addonbox_text h2,
+.cotech_two_team_section .agency-team_img_text .agency_name_info h3 {
+    font-weight: 700;
+    color: #010101;
+}
+
+.cotech_two_section_title h2 span,
+.cotech_two_banner_section .agency-banner_content h1 span,
+.cotech_two_about_section .agency-about_text_icon .agency-about_text h3 span,
+.cotech_two_feature_section .agency-feature_text h2 span,
+.addonbox_section .addonbox_text h2 span,
+.cotech_two_team_section .agency-team_img_text .agency_name_info h3 span {
+    font-weight: 300;
+}
+
+.cotech_btn:before,
+.service_read_more a:after,
+.cotech_two_about_section .agency-about_text_icon .agency-about_text a:after,
+.addonbox_section .addonbox_text a:after,
+.cotech_two_banner_section .agency-banner_content .banner_btn a i,
+.cotech_two_feature_section .agency-feature_text .cotech_btn a i,
+.agency-pricing_section .agency-pricing_item .agency-pricing_btn a i {
+    background: linear-gradient(-45deg, #ff0505 32%, #fd0101 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cotech_two_about_section .agency-about_text_icon .agency-about_text p,
+.cotech_two_feature_section .agency-feature_text p,
+.addonbox_section .addonbox_text p {
+    color: #353535;
+    font-size: 17px;
+    line-height: 1.588;
+    padding-bottom: 20px;
+}
+
+.service_read_more a,
+.cotech_two_about_section .agency-about_text_icon .agency-about_text a,
+.addonbox_section .addonbox_text a {
+    color: #ff0000;
+    font-size: 15px;
+    font-weight: 600;
+    position: relative;
+    font-family: "Poppins";
+}
+
+.service_read_more a:after,
+.cotech_two_about_section .agency-about_text_icon .agency-about_text a:after,
+.addonbox_section .addonbox_text a:after {
+    top: 0px;
+    right: -35px;
+    content: "";
+    font-size: 20px;
+    font-weight: 900;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s all ease-in-out;
+    font-family: "Font Awesome 5 Free";
+}
+
+.service_read_more a:before,
+.cotech_two_about_section .agency-about_text_icon .agency-about_text a:before,
+.addonbox_section .addonbox_text a:before {
+    height: 2px;
+    width: 0%;
+    bottom: -3px;
+    content: "";
+    position: absolute;
+    background-color: #ff0000;
+    transition: 0.4s all ease-in-out;
+}
+
+.service_read_more a:hover:before,
+.cotech_two_about_section .agency-about_text_icon .agency-about_text a:hover:before,
+.addonbox_section .addonbox_text a:hover:before {
+    width: 100%;
+}
+
+.service_read_more a:hover:after,
+.cotech_two_about_section .agency-about_text_icon .agency-about_text a:hover:after,
+.addonbox_section .addonbox_text a:hover:after {
+    opacity: 1;
+    right: -25px;
+    transition-delay: 0.3s;
+    visibility: visible;
+}
+
+/*---------------------------------------------------- */
+/*Banner area*/
+/*----------------------------------------------------*/
+@keyframes floatY {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+@keyframes floatX {
+    0% {
+        transform: translateX(80%);
+    }
+
+    50% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(80%);
+    }
+}
+
+.cotech_two_banner_section {
+    margin: 0 auto;
+    max-width: 1920px;
+    background-color: #fafafa;
+    padding: 225px 0px 90px 0px;
+}
+
+/*.cotech_two_banner_section:before {*/
+/*    right: 0;*/
+/*    width: 80%;*/
+/*    content: "";*/
+/*    top: -10px;*/
+/*    height: 115%;*/
+/*    position: absolute;*/
+/*    background-repeat: no-repeat;*/
+/*    background-image: url({% static 'assets/img/homebanner/b-shape1.png' %});*/
+/*}*/
+
+.cotech_two_banner_section .agency-banner_content {
+    position: relative;
+    z-index: 1;
+    max-width: 450px;
+}
+
+.cotech_two_banner_section .agency-banner_content .agency-tilte_tag {
+    padding: 5px 30px;
+}
+
+.cotech_two_banner_section .agency-banner_content h1 {
+    font-size: 50px;
+    padding: 18px 0px 20px 0px;
+}
+
+.cotech_two_banner_section .agency-banner_content p {
+    font-size: 18px;
+    padding-bottom: 35px;
+}
+
+.cotech_two_banner_section .agency-banner_content .banner_btn a {
+    height: 50px;
+    width: 175px;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 50px;
+    margin-right: 20px;
+    font-weight: 700;
+    color: #010101;
+    font-family: "Poppins";
+    display: inline-block;
+    z-index: 1;
+    border: 2px solid #6c2b95;
+}
+
+.cotech_two_banner_section .agency-banner_content .banner_btn a i {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.cotech_two_banner_section .agency-banner_content .banner_btn span {
+    color: #6a6a6a;
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.cotech_two_banner_section .agency-banner_area .banner_mockup {
+    position: absolute;
+    top: -210px;
+    right: -130px;
+    z-index: 1;
+}
+
+.cotech_two_banner_section .agency-banner_shape1 {
+    left: 0;
+    top: 85px;
+}
+
+.cotech_two_banner_section .agency-banner_shape2 {
+    top: 0;
+    right: 0;
+    animation: floatY 3s ease-in-out infinite;
+}
+
+.cotech_two_banner_section .agency-banner_shape3 {
+    top: 0;
+    right: 50%;
+    transform: translateX(80%);
+    animation: floatX 10s ease-in-out infinite;
+}
+
+/*---------------------------------------------------- */
+/*Service area*/
+/*----------------------------------------------------*/
+.cotech_two_service_section {
+    padding: 45px 0px 110px;
+}
+
+.cotech_two_service_section .service_content {
+    padding-top: 70px;
+}
+
+.cotech_two_service_section .service_content_box {
+    border-radius: 10px;
+    margin-bottom: 50px;
+    padding: 25px 30px 30px 35px;
+    z-index: 1;
+    background-color: #fff;
+    transition: 0.5s all ease-in-out;
+    box-shadow: 0px 20px 81px 0px rgba(8, 0, 20, 0.14);
+}
+
+.cotech_two_service_section .service_content_box:before {
+    content: "";
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -3;
+    border-radius: 10px;
+    position: absolute;
+    transition: 0.5s all ease-in-out;
+    background-image: linear-gradient(45deg, #c00f0f 32%, #6b2c94 100%);
+}
+
+.cotech_two_service_section .service_content_box:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.cotech_two_service_section .service_content_box:hover {
+    transform: translate(-7px, -7px);
+    box-shadow: 0px 20px 81px 0px rgba(8, 0, 20, 0.3);
+}
+
+.cotech_two_service_section .service_content_box:hover:before {
+    transform: translate(7px, 7px);
+}
+
+.cotech_two_service_section .service_content_box .service_icon_box {
+    width: 60px;
+    margin-bottom: 18px;
+}
+
+.cotech_two_service_section .service_content_box .service_icon_box .upper_icon svg {
+    height: 48px;
+    width: 48px;
+    fill: #30347b;
+}
+
+.cotech_two_service_section .service_content_box .service_icon_box .lower_icon {
+    position: absolute;
+    top: 10px;
+    z-index: -1;
+    right: 0;
+}
+
+.cotech_two_service_section .service_content_box .service_icon_box .lower_icon svg {
+    width: 45px;
+    height: 45px;
+    fill: #f59090;
+}
+
+.cotech_two_service_section .service_content_box .service_text_box h3 {
+    color: #010101;
+    font-size: 22px;
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+
+.cotech_two_service_section .service_content_box .service_text_box p {
+    line-height: 1.5;
+    color: #666666;
+}
+
+/*---------------------------------------------------- */
+/*Service area*/
+/*----------------------------------------------------*/
+.cotech_two_about_section {
+    padding: 70px 0px;
+    background-color: #ebedf2;
+}
+
+/* .cotech_two_about_section:before {
+content: "";
+position: absolute;
+top: 0;
+right: -400px;
+height: 100%;
+width: 800px;
+background-repeat: no-repeat;
+background-size: cover;
+background-image: url();
+} */
+
+.cotech_two_about_section:after {
+    content: "";
+    height: 600px;
+    width: 600px;
+    right: -380px;
+    top: 285px;
+    border-radius: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url({% static 'assets/img/homebanner/abshape2.png' %});
+}
+
+.cotech_two_about_section .about_content_agency {
+    padding: 50px 70px 50px 110px;
+}
+
+.cotech_two_about_section .agency-about_text_icon {
+    padding-top: 35px;
+}
+
+.cotech_two_about_section .agency-about_text_icon .agency-about_icon {
+    width: 70px;
+    height: 70px;
+    line-height: 40px;
+    padding-top: 15px;
+    border-radius: 100%;
+    margin-bottom: 16px;
+    background-color: #6c2b95;
+}
+
+.cotech_two_about_section .agency-about_text_icon .agency-about_icon svg {
+    fill: #fff;
+    width: 40px;
+    height: 40px;
+}
+
+.cotech_two_about_section .agency-about_text_icon .agency-about_text h3 {
+    font-size: 36px;
+    line-height: 1.278;
+    padding-bottom: 15px;
+}
+
+/*---------------------------------------------------- */
+/*Feature area*/
+/*----------------------------------------------------*/
+.cotech_two_feature_section {
+    padding: 105px 0px 85px;
+}
+
+.cotech_two_feature_section .agency-feature_text {
+    max-width: 520px;
+    padding: 40px 0 0 50px;
+}
+
+.cotech_two_feature_section .agency-feature_text h2 {
+    font-size: 40px;
+    line-height: 1.25;
+    padding: 15px 0px 15px;
+}
+
+.cotech_two_feature_section .agency-feature_text p {
+    padding-bottom: 43px;
+}
+
+.cotech_btn a {
+    padding: 10px 25px 10px 25px;
+}
+
+.cotech_btn a i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.cotech_two_feature_section .agency-feature_right {
+    padding-left: 35px;
+}
+
+.cotech_two_feature_section .agency-feature_right .agency-feature_list {
+    margin-bottom: 10px;
+    padding: 22px 32px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: 0.4s all ease-in-out;
+    position: relative;
+}
+
+.cotech_two_feature_section .agency-feature_right .agency-feature_list:before {
+    position: absolute;
+    content: "";
+    height: 0px;
+    width: 5px;
+    left: 0;
+    top: 50%;
+    border-radius: 50px;
+    transform: translateY(-50%);
+    transition: 0.3s all ease-in-out;
+}
+
+.cotech_two_feature_section .agency-feature_right .agency-feature_list:hover:before {
+    height: 60px;
+}
+
+.cotech_two_feature_section .agency-feature_right .agency-feature_list .agency-feature_icon {
+    width: 95px;
+    float: left;
+    height: 95px;
+    border-radius: 100%;
+    line-height: 105px;
+    margin-right: 30px;
+}
+
+.cotech_two_feature_section .agency-feature_right .agency-feature_list .agency-feature_icon:after {
+    left: 0;
+    right: 0;
+    top: 5px;
+    width: 90%;
+    height: 90%;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    border: 5px solid #fff;
+    border-radius: 100%;
+}
+
+.cotech_two_feature_section .agency-feature_right .agency-feature_list .agency-feature_icon i {
+    font-size: 30px;
+}
+
+.cotech_two_feature_section .agency-feature_right .agency-feature_list .agency-feature_text_box {
+    max-width: 310px;
+    display: inline-block;
+}
+
+.cotech_two_feature_section .agency-feature_right .agency-feature_list .agency-feature_text_box h3 {
+    color: #010101;
+    font-size: 22px;
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+
+.cotech_two_feature_section .agency-feature_right .agency-feature_list:hover {
+    margin-left: 30px;
+    box-shadow: 0px 3px 43px 0px rgba(0, 0, 0, 0.13);
+}
+
+.cotech_two_feature_section .agency-feature_right .agency-feature_list:nth-child(1) .agency-feature_icon {
+    background-color: #d9f3de;
+}
+
+.cotech_two_feature_section .agency-feature_right .agency-feature_list:nth-child(1) .agency-feature_icon i {
+    color: #049507;
+}
+
+.cotech_two_feature_section .agency-feature_right .agency-feature_list:nth-child(1):before {
+    background-color: #049507;
+}
+
+.cotech_two_feature_section .agency-feature_right .agency-feature_list:nth-child(2) .agency-feature_icon {
+    background-color: #e1e1f5;
+}
+
+.cotech_two_feature_section .agency-feature_right .agency-feature_list:nth-child(2) .agency-feature_icon i {
+    color: #6c2b95;
+}
+
+.cotech_two_feature_section .agency-feature_right .agency-feature_list:nth-child(2):before {
+    background-color: #6c2b95;
+}
+
+.cotech_two_feature_section .agency-feature_right .agency-feature_list:nth-child(3) .agency-feature_icon {
+    background-color: #ebdcf4;
+}
+
+.cotech_two_feature_section .agency-feature_right .agency-feature_list:nth-child(3) .agency-feature_icon i {
+    color: #d912dc;
+}
+
+.cotech_two_feature_section .agency-feature_right .agency-feature_list:nth-child(3):before {
+    background-color: #d912dc;
+}
+
+/*---------------------------------------------------- */
+/*Intergation area*/
+/*----------------------------------------------------*/
+.addonbox_section {
+    background-color: #f0f2f7;
+    padding: 120px 0px 55px;
+}
+
+.addonbox_section .addonbox_img {
+    padding-top: 10px;
+}
+
+.addonbox_section .addonbox_text {
+    padding-right: 50px;
+}
+
+.addonbox_section .addonbox_text h2 {
+    font-size: 40px;
+    line-height: 1.25;
+    padding: 15px 0px 20px;
+}
+
+.addonbox_section .addonbox_text p {
+    color: #666666;
+    padding-bottom: 18px;
+}
+
+/*---------------------------------------------------- */
+/*Team area*/
+/*----------------------------------------------------*/
+.cotech_two_team_section {
+    padding: 118px 0px;
+}
+
+.cotech_two_team_section .agency-team_membar {
+    padding-top: 130px;
+}
+
+.cotech_two_team_section .agency-team_img_text {
+    width: 100%;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 70px 15px 20px;
+    transition: 0.4s all ease-in-out;
+    box-shadow: 0px 12px 43px 0px rgba(0, 0, 0, 0.13);
+}
+
+.cotech_two_team_section .agency-team_img_text:hover {
+    box-shadow: 0px 23px 43px 0px rgba(0, 0, 0, 0.26);
+}
+
+.cotech_two_team_section .agency-team_img_text:hover .agency_tean_img:before,
+.cotech_two_team_section .agency-team_img_text:hover .agency_tean_img:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cotech_two_team_section .agency-team_img_text .agency_tean_img {
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    border-radius: 100%;
+    position: absolute;
+    top: -75px;
+    left: 15px;
+}
+
+.cotech_two_team_section .agency-team_img_text .agency_tean_img:before,
+.cotech_two_team_section .agency-team_img_text .agency_tean_img:after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 100%;
+    border: 3px solid #cc0fda;
+    z-index: 1;
+    transition: 0.3s all ease-in-out;
+}
+
+.cotech_two_team_section .agency-team_img_text .agency_tean_img:after {
+    height: 95%;
+    width: 95%;
+    top: 50%;
+    right: 0;
+    margin: 0 auto;
+    border: 3px solid #fff;
+    transform: translateY(-50%);
+}
+
+.cotech_two_team_section .agency-team_img_text .agency_name_info {
+    float: left;
+}
+
+.cotech_two_team_section .agency-team_img_text .agency_name_info h3 {
+    font-size: 22px;
+    padding-bottom: 5px;
+}
+
+.cotech_two_team_section .agency-team_img_text .agency_name_info .agency-designation {
+    font-size: 15px;
+    font-weight: 500;
+    color: #53117f;
+}
+
+.cotech_two_team_section .agency-team_img_text .agency_name_info .agency_mem_contact {
+    padding-top: 25px;
+}
+
+.cotech_two_team_section .agency-team_img_text .agency_name_info .agency_mem_contact span {
+    font-size: 15px;
+    color: #737272;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.cotech_two_team_section .agency-team_img_text .agency_name_info .agency_mem_contact span i {
+    color: #cc0fda;
+    margin-right: 8px;
+}
+
+.cotech_two_team_section .agency-team_img_text .agency-mem_social {
+    bottom: 30px;
+    right: 15px;
+    position: absolute;
+}
+
+.cotech_two_team_section .agency-team_img_text .agency-mem_social ul {
+    opacity: 0;
+    margin-bottom: 15px;
+    font-size: 14px;
+    padding-top: 10px;
+    visibility: hidden;
+    position: relative;
+    top: -50px;
+    transition: 0.3s all ease-in-out;
+}
+
+.cotech_two_team_section .agency-team_img_text .agency-mem_social li {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    transition: 0.3s all ease-in-out;
+}
+
+.cotech_two_team_section .agency-team_img_text .agency-mem_social li:hover {
+    transform: translateX(5px);
+}
+
+.cotech_two_team_section .agency-team_img_text .agency-mem_social .agency-share_btn {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 100%;
+    transition: 0.3s all ease-in-out;
+    background-color: #53117f;
+}
+
+.cotech_two_team_section .agency-team_img_text .agency-mem_social .agency-share_btn i {
+    color: #fff;
+}
+
+.cotech_two_team_section .agency-team_img_text .agency-mem_social:after {
+    bottom: 20px;
+    z-index: -1;
+    content: "";
+    width: 50px;
+    height: 0%;
+    opacity: 0;
+    border-radius: 35px;
+    position: absolute;
+    visibility: hidden;
+    background-color: #53117f;
+    transition: 0.5s all ease-in-out;
+}
+
+.cotech_two_team_section .agency-team_img_text:hover .agency-mem_social:after {
+    height: 100%;
+    bottom: 0px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.cotech_two_team_section .agency-team_img_text:hover .agency-share_btn {
+    background-color: #cc0fda;
+}
+
+.cotech_two_team_section .agency-team_img_text:hover ul {
+    top: 0;
+    transition-delay: 0.5s;
+    opacity: 1;
+    visibility: visible;
+}
+
+#agency_team_slide .owl-stage-outer {
+    overflow: visible;
+}
+
+#agency_team_slide .owl-item {
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+#agency_team_slide .owl-item.active {
+    opacity: 1;
+}
+
+#agency_team_slide .owl-nav {
+    text-align: center;
+    display: table;
+    margin: 35px auto 0;
+    padding-top: 3px;
+    border-radius: 20px;
+    background-color: #beaacb;
+}
+
+#agency_team_slide .owl-nav .owl-next,
+#agency_team_slide .owl-nav .owl-prev {
+    margin: 0px 10px;
+    font-size: 22px;
+    line-height: 10px;
+    display: inline-block;
+}
+
+#agency_team_slide .owl-nav .owl-next i,
+#agency_team_slide .owl-nav .owl-prev i {
+    color: #fff;
+    transition: 0.3s all ease-in-out;
+}
+
+#agency_team_slide .owl-nav .owl-next i:hover,
+#agency_team_slide .owl-nav .owl-prev i:hover {
+    color: #53117f;
+}
+
+
+/*---------------------------------------------------- */
+/* Pricing area*/
+/*----------------------------------------------------*/
+
+.agency-pricing_section {
+    padding: 120px 0px 100px;
+}
+
+.agency-pricing_section .agency-pricing_content {
+    padding-top: 80px;
+}
+
+.agency-pricing_section .agency-pricing_item {
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 330px;
+    border-radius: 15px;
+    transition: 0.4s all ease-in-out;
+    box-shadow: 0px 23px 43px 0px rgba(0, 0, 0, 0.13);
+}
+
+
+.agency-pricing_section .agency-pricing_item:hover {
+    box-shadow: 0px 23px 43px 0px rgba(0, 0, 0, 0.26);
+}
+
+
+
+/*---------------------------------------------------- */
+/* Footer area*/
+/*----------------------------------------------------*/
+.agency_footer_social {
+    max-width: 300px;
+    padding-top: 15px;
+}
+
+.agency_footer_social form {
+    margin: 18px 0px 30px;
+    position: relative;
+}
+
+.agency_footer_social form input {
+    height: 45px;
+    background-color: #fff;
+    border: none;
+    width: 100%;
+    padding-left: 30px;
+}
+
+.agency_footer_social form button {
+    color: #fff;
+    width: 62px;
+    border: none;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: #6c2b95;
+}
+
+
+/*---------------------------------------------------- */
+/* Responsive area*/
+/*----------------------------------------------------*/
+
+@media screen and (max-width: 1120px) {
+    .cotech_two_feature_section .agency-feature_right {
+        padding-left: 0;
+    }
+
+    .cotech_two_feature_section .agency-feature_right .agency-feature_list .agency-feature_icon {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    .cotech_two_banner_section .agency-banner_area .banner_mockup {
+        max-width: 630px;
+        top: 30px;
+    }
+}
+
+@media screen and (max-width: 1015px) {
+    .cotech_two_banner_section .agency-banner_area .banner_mockup {
+        max-width: 630px;
+        top: 30px;
+    }
+
+    .cotech_two_feature_section .agency-feature_right .agency-feature_list {
+        padding: 22px 20px 20px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .cotech_two_banner_section:before {
+        width: 100%;
+        top: 0;
+        height: 100%;
+    }
+
+    .cotech_two_banner_section {
+        padding-bottom: 0;
+        z-index: 1;
+    }
+
+    .cotech_two_banner_section .agency-banner_shape1 {
+        z-index: -1;
+    }
+
+    .cotech_two_banner_section .agency-banner_area .banner_mockup {
+        position: static;
+        margin: 0 auto;
+    }
+
+    .cotech_two_banner_section .agency-banner_content {
+        max-width: 750px;
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    .about_content_agency {
+        max-width: 750px;
+        margin: 0 auto;
+    }
+
+    .cotech_two_main_header .agency-main-navigation {
+        display: none;
+    }
+
+    .cotech_two_banner_section .agency-banner_shape3 {
+        top: 60px;
+    }
+
+    .cotech_two_footer_section .agency-newslatter_section .newsletter_pattern_1 {
+        display: none;
+    }
+
+    .cotech_two_footer_section:before {
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .newsletter_pattern_4 {
+        display: none;
+    }
+
+    .newsletter_pattern_5 {
+        display: none;
+    }
+
+    .cotech_two_footer_section {
+        background-color: #1b0234;
+    }
+
+    .cotech_two_footer_section .agency_footer_widget {
+        margin-bottom: 30px;
+    }
+
+    .cotech_two_footer_section .agency_footer_widget .agency_widget_title {
+        padding-bottom: 20px;
+    }
+
+    .agency-mobile_menu_button {
+        display: block;
+    }
+
+    .cotech_two_main_header .cotech_sign_up_btn {
+        position: absolute;
+        top: 3px;
+        right: 70px;
+        height: 40px;
+        width: 120px;
+        line-height: 40px;
+    }
+
+    .cotech_two_main_header .cotech_sign_up_btn a {
+        padding-left: 0;
+    }
+
+    .cotech_two_main_header .cotech_sign_up_btn a:before {
+        display: none;
+    }
+
+    .cotech_two_about_section .about_content_agency {
+        padding: 30px 50px 30px 50px;
+    }
+
+    .cotech_two_feature_section .agency-feature_right {
+        padding-left: 0;
+        margin-top: 40px;
+    }
+
+    .cotech_two_footer_section {
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .cotech_two_main_header .cotech_sign_up_btn {
+        top: -40px;
+    }
+
+    .cotech_two_main_header.cotech_2-menu-bg-overlay .cotech_sign_up_btn {
+        top: -42px;
+    }
+
+    .cotech_two_service_section .service_content_box {
+        max-width: 370px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cotech_two_banner_section {
+        padding-top: 180px;
+    }
+
+    .cotech_two_banner_section .agency-banner_content h1 {
+        font-size: 45px;
+    }
+
+    .cotech_two_banner_section .agency-banner_content .banner_btn a {
+        height: 40px;
+        width: 140px;
+        margin-right: 10px;
+        line-height: 36px;
+    }
+
+    .cotech_two_banner_section .agency-banner_content .banner_btn a i {
+        font-size: 16px;
+        margin-right: 5px;
+    }
+
+    .cotech_two_banner_section .agency-banner_content {
+        padding-bottom: 30px;
+    }
+
+    .cotech_two_service_section {
+        padding: 60px 0px;
+    }
+
+    .cotech_two_about_section {
+        padding: 60px 0px 30px;
+    }
+
+    .cotech_two_about_section .about_content_agency {
+        padding: 20px 25px 20px 25px;
+    }
+
+    .cotech_two_about_section:before {
+        display: none;
+    }
+
+    .cotech_two_about_section .agency-about_text_icon {
+        padding-top: 0;
+        margin-bottom: 30px;
+    }
+
+    .agency-about_img {
+        margin-bottom: 30px;
+    }
+
+    .cotech_two_feature_section {
+        padding: 60px 0px 25px;
+    }
+
+    .cotech_two_feature_section .agency-feature_right .agency-feature_list .agency-feature_icon {
+        margin: 0 auto;
+        float: none;
+        margin-bottom: 20px;
+    }
+
+    .cotech_two_feature_section .agency-feature_right .agency-feature_list .agency-feature_text_box {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .cotech_two_team_section {
+        padding: 60px 0px;
+    }
+
+    .agency-faq_section .agency_faq_content button {
+        padding-right: 20px;
+    }
+
+    .agency-faq_section {
+        padding: 60px 0px 25px;
+    }
+
+    .agency-pricing_section {
+        padding: 60px 0 40px;
+    }
+
+    .cotech_two_section_title h2 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .cotech_two_section_title h2 {
+        font-size: 30px;
+    }
+
+    .cotech_two_service_section .service_content {
+        padding-top: 40px;
+    }
+
+    .cotech_two_about_section .agency-about_text_icon .agency-about_text h3 {
+        font-size: 30px;
+    }
+
+    .cotech_two_about_section .agency-about_text_icon {
+        margin-bottom: 15px;
+    }
+
+    .cotech_two_feature_section .agency-feature_text h2 {
+        font-size: 30px;
+    }
+
+    .cotech_two_feature_section .agency-feature_text {
+        padding: 20px 0 0 0px;
+    }
+
+    .cotech_two_feature_section .agency-feature_text p {
+        padding-bottom: 25px;
+    }
+
+    .addonbox_section .addonbox_text {
+        padding-right: 0;
+    }
+
+    .addonbox_section .addonbox_text h2 {
+        font-size: 30px;
+    }
+
+    .agency-faq_section .agency_faq_content {
+        padding-top: 40px;
+    }
+
+    .agency-pricing_section .agency-pricing_content {
+        padding-top: 40px;
+    }
+
+    .cotech_two_footer_section {
+        padding-bottom: 30px;
+    }
+
+    .cotech_two_footer_section .agency-newslatter_section .agency-newslatter-form button {
+        width: 100px;
+    }
+
+    .agency-pricing_section .agency-pricing_item .agency-pricing_list li {
+        padding: 18px 20px 16px 20px;
+    }
+
+    .agency-pricing_section .agency-pricing_item .agency-pricing_price .agency-pricing_text strong {
+        font-size: 40px;
+    }
+
+    .scrollup {
+        width: 40px;
+        height: 40px;
+        right: 10px;
+        line-height: 40px;
+    }
+
+    .cotech_two_feature_section .agency-feature_right .agency-feature_list:hover {
+        margin-left: 0;
+    }
+
+    .cotech_two_main_header .cotech_sign_up_btn {
+        right: 55px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .cotech_two_banner_section .agency-banner_content h1 {
+        font-size: 36px;
+    }
+
+    .cotech_two_about_section .agency-about_text_icon .agency-about_text h3 {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .cotech_two_banner_section .agency-banner_content h1 {
+        font-size: 34px;
+    }
+
+    .cotech_two_section_title h2 {
+        font-size: 26px;
+    }
+
+    .cotech_two_about_section .agency-about_text_icon .agency-about_text h3 {
+        font-size: 24px;
+    }
+}
+
+
+/*global area*/
+/*----------------------------------------------------*/
+.co_tech-home {
+    margin: 0;
+    padding: 0;
+    color: #494949;
+    font-size: 16px;
+    overflow-x: hidden;
+    line-height: 1.625;
+    font-family: "Roboto";
+    -moz-osx-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+.decoration-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes zooming {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.05, 1.05);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.zooming {
+    animation: zooming 18s infinite both;
+}
+
+.co_tech-headline h1,
+.co_tech-headline h2,
+.co_tech-headline h3,
+.co_tech-headline h4,
+.co_tech-headline h5,
+.co_tech-headline h6 {
+    margin: 0;
+    font-family: "Poppins";
+}
+
+.co_tech-section-title {
+    max-width: 530px;
+    margin: 0 auto;
+}
+
+.co_tech-section-title .co_tech-title-tag {
+    color: #53117f;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.co_tech-section-title h2 {
+    color: #010101;
+    font-size: 40px;
+    font-weight: 700;
+    position: relative;
+    padding: 25px 0px 0px;
+}
+
+.co_tech-section-title h2:before {
+    left: 0;
+    right: 0;
+    top: 13px;
+    height: 3px;
+    width: 42px;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    background-image: linear-gradient(125deg, #6407c1 0%, #324add 49%, #008df9 100%);
+}
+
+.co_tech-section-title.co_tech-title-left h2:before {
+    right: auto;
+}
+
+
+
+
+/*===========================
+6.ABOUT css 
+===========================*/
+.about-feature .about-feature-image img {
+    width: 100%;
+}
+
+.about-feature .about-feature-content {
+    margin-top: 48px;
+}
+
+.about-feature .about-feature-content .feature-title {
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 55px;
+    color: #121212;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .about-feature .about-feature-content .feature-title {
+        font-size: 38px;
+        line-height: 45px;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-feature .about-feature-content .feature-title {
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
+
+.about-feature .about-feature-content .text {
+    font-size: 20px;
+    line-height: 25px;
+    color: #121212;
+    margin-top: 8px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .about-feature .about-feature-content .text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-feature .about-feature-content .text {
+        font-size: 18px;
+    }
+}
+
+.about-feature-items .feature-items-icon img {
+    width: 120px;
+}
+
+@media (max-width: 767px) {
+    .about-feature-items .feature-items-icon img {
+        width: 90px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .about-feature-items .feature-items-icon img {
+        width: 120px;
+    }
+}
+
+.about-feature-items .feature-items-content {
+    padding-left: 30px;
+}
+
+@media (max-width: 767px) {
+    .about-feature-items .feature-items-content {
+        padding-left: 0;
+        padding-top: 25px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .about-feature-items .feature-items-content {
+        padding-left: 30px;
+        padding-top: 0;
+    }
+}
+
+.about-feature-items .feature-items-content .items-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    color: #121212;
+}
+
+@media (max-width: 767px) {
+    .about-feature-items .feature-items-content .items-title {
+        font-size: 18px;
+    }
+}
+
+.about-feature-items .feature-items-content .text {
+    font-size: 16px;
+    line-height: 24px;
+    color: #121212;
+    margin-top: 6px;
+    text-align: justify;
+    padding-top: 1px;
+}
+
+@media (max-width: 767px) {
+    .about-feature-items .feature-items-content .text {
+        font-size: 14px;
+    }
+}
+
+
+/*===========================
+9.TESTIMONIAL css 
+===========================*/
+.testimonial-area {
+    background-color: #f4f6f7;
+}
+
+.carousel {
+    padding: 0 70px;
+}
+
+.carousel .carousel-item {
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    min-height: 290px;
+}
+
+.carousel .carousel-item .img-box {
+    width: 135px;
+    height: 135px;
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+
+.carousel .img-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+}
+
+.carousel .testimonial {
+    padding: 30px 0 10px;
+}
+
+.carousel .overview {
+    font-style: italic;
+}
+
+.carousel .overview b {
+    text-transform: uppercase;
+    color: #f53838;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    top: 50%;
+    background: none;
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+    background-color: #f4f6f7;
+    color: #000;
+    font-size: 68px;
+    line-height: 42px;
+    position: absolute;
+    display: inline-block;
+    /*	color: rgba(0, 0, 0, 0.8);*/
+    text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+
+.carousel-indicators {
+    bottom: -40px;
+}
+
+.carousel-indicators li,
+.carousel-indicators li.active {
+    width: 12px;
+    height: 12px;
+    margin: 1px 3px;
+    border-radius: 50%;
+    border: none;
+}
+
+.carousel-indicators li {
+    background: #999;
+    border-color: transparent;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-indicators li.active {
+    background: #555;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+#myCarousel .carousel-inner .carousel-item p {
+    text-align: left;
+    color: black;
+    font-size: 16px;
+}
+
+/* Our Client */
+.section-header h4 {
+    font-size: 28px;
+    color: #000;
+    text-align: center;
+    font-weight: 700;
+    position: relative
+}
+
+.section-header p {
+    text-align: center;
+    margin: auto;
+    font-size: 15px;
+    padding-bottom: 60px;
+    color: #556877;
+    width: 50%
+}
+
+#clients {
+    padding-top: 0;
+}
+
+#clients .clients-wrap {
+    border-top: 1px solid #d6eaff;
+    border-left: 1px solid #d6eaff;
+    margin-bottom: 30px
+}
+
+#clients .client-logo {
+    padding: 64px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-right: 1px solid #d6eaff;
+    border-bottom: 1px solid #d6eaff;
+    overflow: hidden;
+    background: #fff;
+    height: 160px
+}
+
+#clients img {
+    transition: all 0.4s ease-in-out
+}
+
+
+
+
+/* Faq-2 */
+.template_faq {
+    background: #edf3fe none repeat scroll 0 0;
+}
+
+.panel-group {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 3px;
+    /*box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.04);*/
+    margin-bottom: 0;
+    padding: 30px;
+}
+
+#accordion .panel {
+    border: medium none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0 0 15px 10px;
+}
+
+#accordion .panel-heading {
+    border-radius: 30px;
+    padding: 0;
+}
+
+#accordion .panel-title a {
+    background: #dc3545 none repeat scroll 0 0;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 20px 12px 50px;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+
+#accordion .panel-title a.collapsed {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+#accordion .panel-title a::after,
+#accordion .panel-title a.collapsed::after {
+    background: #dc3545 none repeat scroll 0 0;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.58);
+    color: #fff;
+    content: "";
+    font-family: fontawesome;
+    font-size: 25px;
+    height: 55px;
+    left: -20px;
+    line-height: 55px;
+    position: absolute;
+    text-align: center;
+    top: -5px;
+    transition: all 0.3s ease 0s;
+    width: 55px;
+}
+
+#accordion .panel-title a.collapsed::after {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    box-shadow: none;
+    color: #333;
+    content: "";
+}
+
+#accordion .panel-body {
+    background: transparent none repeat scroll 0 0;
+    border-top: medium none;
+    padding: 20px 25px 10px 9px;
+    position: relative;
+}
+
+#accordion .panel-body p {
+    border-left: 1px dashed #8c8c8c;
+    padding-left: 25px;
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------------# Footer----------------------------------------------------------------------------------------------------------------------------*/
+.footer {
+    position: relative;
+    padding-top: 45px;
+    background: #121518;
+    font-size: 1rem;
+}
+
+.footer .footer-about,
+.footer .footer-contact,
+.footer .footer-link,
+.footer .footer-newsletter {
+    position: relative;
+    margin-bottom: 45px;
+    color: #cccccc;
+}
+
+.footer .footer-about h3,
+.footer .footer-contact h3,
+.footer .footer-link h3,
+.footer .footer-newsletter h3 {
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.footer .footer-about h3::after,
+.footer .footer-contact h3::after,
+.footer .footer-link h3::after,
+.footer .footer-newsletter h3::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background: #F53838;
+}
+
+.footer .footer-about {
+    margin-bottom: 0;
+}
+
+.footer .footer-contact p {
+    margin-bottom: 8px;
+}
+
+.footer .footer-contact p i {
+    width: 25px;
+}
+
+.footer .footer-social {
+    position: relative;
+    margin-top: 15px;
+}
+
+.footer .footer-social a {
+    display: inline-block;
+}
+
+.footer .footer-social a i {
+    margin-right: 15px;
+    font-size: 18px;
+    color: #cccccc;
+}
+
+.footer .footer-social a:last-child i {
+    margin: 0;
+}
+
+.footer .footer-social a:hover i {
+    color: #0085ff;
+}
+
+.footer .footer-link a {
+    display: block;
+    margin-bottom: 12px;
+    color: #cccccc;
+    transition: .3s;
+}
+
+.footer .footer-link a::before {
+    position: relative;
+    content: "\27A5";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.footer .footer-link a:hover {
+    color: #F53838;
+    letter-spacing: 1px;
+}
+
+.footer .footer-newsletter .form {
+    position: relative;
+    width: 100%;
+}
+
+.footer .footer-newsletter input {
+    height: 50px;
+    border: none;
+    border-radius: 0;
+    background: #000000;
+    margin-bottom: 15px;
+}
+
+.footer .footer-newsletter .btn {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 8px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: #000000;
+    border-radius: 0;
+    border: 2px solid #F53838;
+    transition: .3s;
+}
+
+.footer .footer-newsletter .btn:hover {
+    background: #F53838;
+}
+
+.footer .footer-newsletter .btn:focus {
+    box-shadow: none;
+}
+
+.footer .copyright {
+    position: relative;
+    padding: 2px;
+    background: #000000;
+}
+
+.footer .copyright .copy-text p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #cccccc;
+}
+
+.footer .copyright .copy-text p a {
+    color: #cccccc;
+}
+
+.footer .copyright .copy-text p a:hover {
+    color: #0085ff;
+}
+
+.footer .copyright .copy-menu {
+    position: relative;
+    font-size: 0;
+    text-align: right;
+}
+
+.footer .copyright .copy-menu a {
+    color: #cccccc;
+    font-size: 16px;
+    font-weight: 400;
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, .3);
+}
+
+.footer .copyright .copy-menu a:hover {
+    color: #0085ff;
+}
+
+.footer .copyright .copy-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+
+@media (max-width: 767.98px) {
+
+    .footer .copyright .copy-text,
+    .footer .copyright .copy-menu {
+        text-align: center;
+    }
+
+    .footer .copyright .copy-text p {
+        margin-bottom: 5px;
+    }
+}
+
+.tab {
+    text-align: center;
+}
+
+.tab .nav-tabs {
+    background-color: #ffffff;
+    color: #000;
+    box-shadow: slateblue;
+    -webkit-box-shadow: 0 0 15px rgb(0 0 0 / 40%);
+    padding: 15px 40px !important;
+    border-radius: 10px;
+}
+
+.tab .nav-tabs li {
+    padding: 0 14px;
+}
+
+.tab .nav-tabs li a {
+    border-radius: 10px !important;
+}
+
+.socialsection {
+    display: none;
+}
+
+
+
